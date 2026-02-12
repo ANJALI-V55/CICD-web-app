@@ -1,28 +1,70 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a0a;
+    color: #00ff99;
     text-align: center;
     margin-top: 100px;
 }
 
+/* Glowing container */
 .container {
-    background: white;
+    background: #111;
     padding: 40px;
     width: 50%;
     margin: auto;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border: 1px solid #00ff99;
+    box-shadow: 0 0 20px #00ff99;
+    transition: 0.3s ease;
 }
 
+/* Subtle hover glow boost */
+.container:hover {
+    box-shadow: 0 0 40px #00ff99;
+    transform: scale(1.02);
+}
+
+/* Hacker-style button */
 button {
-    padding: 10px 20px;
-    background-color: #0078d7;
-    color: white;
-    border: none;
+    padding: 12px 25px;
+    background: black;
+    color: #00ff99;
+    border: 1px solid #00ff99;
     border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
 }
 
+/* Neon hover effect */
 button:hover {
-    background-color: #005ea6;
+    background: #00ff99;
+    color: black;
+    box-shadow: 0 0 15px #00ff99, 0 0 30px #00ff99;
 }
+
+/* Click press effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Glitch effect for heading */
+h1 {
+    font-size: 36px;
+    color: #00ff99;
+    position: relative;
+    text-shadow: 0 0 5px #00ff99;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Flicker animation */
+@keyframes flicker {
+    0% { opacity: 1; }
+    45% { opacity: 0.8; }
+    60% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
